@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1st Step Toward Army</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🇮🇳 1st Step Toward Army</h1>
+    <p class="tagline">Your Daily Dose of CDS Current Affairs</p>
+    <button id="toggle-theme">🌓 Toggle Theme</button>
+  </header>
+
+  <main>
+    <section class="daily-news">
+      <h2>📅 Today's Current Affairs – <span id="today-date"></span></h2>
+      <p>Daily news summary will appear here. Check back every day for fresh updates!</p>
+      <a href="current-affairs.html" class="btn">Read Full Summary</a>
+    </section>
+
+    <section class="quiz-section">
+      <h2>🧠 Daily Quiz</h2>
+      <p>Test your knowledge with daily multiple choice questions.</p>
+      <a href="quiz.html" class="btn">Take Today's Quiz</a>
+    </section>
+
+    <section class="links">
+      <h2>📚 Explore More</h2>
+      <ul>
+        <li><a href="archive.html">🗂️ Archive</a></li>
+        <li><a href="weekly-pdf.html">📥 Weekly PDFs</a></li>
+        <li><a href="about.html">📖 About This Platform</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p> 2025 1st Step Toward Army. A learning initiative for CDS aspirants.</p>
+  </footer>
+
+  <script>
+    // Date display
+    const date = new Date().toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+    document.getElementById("today-date").textContent = date;
+
+    // Theme toggle
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
